@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarker</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <main class="py-5 vh-100">
+        <div class="container">
+            <div class="content  d-flex flex-column align-items-center justify-content-center">
+                <h1>Bookmarker</h1>
+                <div class="bookmark px-3 py-4 mt-5 d-flex flex-column align-items-center justify-content-center w-100 gap-4">
+                    <div class="title d-flex align-items-center justify-content-center">
+                        <h2>
+                            <i class="fas fa-bookmark"></i>
+                            Bookmark your favorite sites
+                            <i class="fas fa-bookmark"></i>
+                        </h2>
+                    </div>
+
+                    <div class="site-name w-100">
+                        <div class="label fw-bold">
+                            <i class="fa-solid fa-book-bookmark pe-2"></i>
+                            <label for="name">Site Name</label>
+                        </div>
+                        <input type="text" placeholder="Site Name" class="form-control" id="name">
+                    </div>
+
+                    <div class="site-url w-100">
+                        <div class="label fw-bold ">
+                            <i class="fa-solid fa-link pe-2"></i>
+                            <label for="url" >Site URL</label>
+                        </div>
+                        <input type="text" placeholder="Site Name" class="form-control" id="url" >
+                    </div>
+
+                    <div class="buttons d-flex align-items-center justify-content-center">
+                        <!-- data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button> -->
+                        <button class="btn btn-submit px-5" id="submit">Submit</button>
+
+                    </div>
+                </div>
+                <!-- table -->
+                <table class="table text-center mt-4">
+                    <thead>
+                        <tr>
+                            <th>Index</th>
+                            <th>Website Name</th>
+                            <th>Visit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <button type="button" class="btn btn-primary d-none" id="modal-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Launch static backdrop modal
+      </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header border-0">
+              <div class="dots">
+                <i class="fa-solid fa-circle red-circle"></i>
+                <i class="fa-solid fa-circle orange-circle"></i>
+                <i class="fa-solid fa-circle green-circle"></i>
+              </div>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Site Name or Url is not valid, Please follow the rules below :</p>
+                <div class="instructions">
+                    <ul class="list-unstyled m-0">
+                        <li>
+                            <i class="fa-regular fa-circle-right p-2"></i>
+                            Site name must contain at least 3 characters
+                        </li>
+                        <li>
+                            <i class="fa-regular fa-circle-right p-2"></i>
+                            Site URL must be a valid one
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

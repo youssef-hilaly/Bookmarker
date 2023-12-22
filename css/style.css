@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&family=Saira+Condensed:wght@300;400;500;600;700;800&display=swap");
+.red-circle {
+    color:#f15f5d
+}
+.orange-circle {
+    color:#febe2e;
+}
+.green-circle {
+    color:#4db748;
+}
+
+body{
+    font-family: "PT Sans Caption", sans-serif;
+    background-color: #f7ecde;
+}
+main h1{
+    font-size: 50px;
+    font-family: "Pacifico", cursive;
+    text-align: center;
+    position: relative;
+}
+main h1::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    left: 0;
+    bottom: 5px;
+    background-color: #fec260;
+    transition: height 350ms;
+    z-index: -1;
+}
+main h1:hover::after{
+    height: 65%;
+}
+main .bookmark{
+    border-color:  #352e28;;
+    border-style: dotted;
+    border-width: 2px 0;
+}
+main .bookmark .title h2{
+    font-weight: bold;
+    font-size: 25px;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-submit {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #d1512d;
+    --bs-btn-border-color: #d1512d;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #bb4120;
+    --bs-btn-hover-border-color: #a03315;
+}
+.btn-visit{
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #9eb23b;
+    --bs-btn-border-color: #9eb23b;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #8a9e23;
+    --bs-btn-hover-border-color: #6e8018;
+}
+
+.modal-body p{
+    font-family: "Bree Serif", serif;
+    font-size: 21px;
+    line-height: 1.3;
+    color: #352e28;
+}
+.instructions li{
+    font-size: 18px;
+    padding-top: 10px;
+}
+.instructions li i{
+    color: #bb4120;
+}
